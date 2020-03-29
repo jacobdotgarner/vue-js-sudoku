@@ -25,15 +25,15 @@ export default {
     difficulty: String //lower is easier, needs to be within 0-1
   },
   methods: {
-    sBtnClick(id) {
+    sBtnClick() {
       // console.log("click @ cell : " + id);
     },
 
-    sBtnFocus(id) {
+    sBtnFocus() {
       // console.log("got focus @ cell : " + id);
     },
 
-    sBtnBlur(id) {
+    sBtnBlur() {
       // console.log("lost focus @ cell : " + id);
     },
 
