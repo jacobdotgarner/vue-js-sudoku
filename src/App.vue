@@ -1,26 +1,39 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
     <h1>Sudoku!</h1>
-    <sudoku-grid difficulty=0.4></sudoku-grid>
-    <controls ></controls>
+    <sudoku-grid v-bind:key="gridKey" v-bind:difficulty="diffVal"></sudoku-grid>
+    <controls v-on:restart-game="restartGame"></controls>
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import SudokuGrid from './components/SudokuGrid.vue'
-import Controls from './components/Controls.vue'
+import SudokuGrid from "./components/SudokuGrid";
+import Controls from "./components/Controls";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     // HelloWorld
     SudokuGrid,
     Controls
+  },
+  data() {
+    return {
+      gridKey: 0,
+      diffVal: 0.5
+    };
+  },
+  methods: {
+    restartGame($event) {
+      console.log("restart game function called");
+      this.diffVal = $event;
+      this.gridKey += 1;
+    }
   }
-}
+};
 </script>
 
 <style scoped>
@@ -32,6 +45,4 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-
-
 </style>

@@ -10,19 +10,6 @@
       v-bind:class="{ badVal: c.bad, preGen: c.preGen}"
       @keydown.stop="sBtnKeyDown(c.id, $event)"
     />
-    <!-- <input
-      class="sBtn"
-      type="button"
-      v-for="c in cells"
-      v-bind:value="c.val"
-      v-bind:key="c.id"
-      v-bind:id="c.id"
-      v-bind:class="{ badVal: c.bad, preGen: c.preGen}"
-      @click.stop="sBtnClick(c.id)"
-      @focus.stop="sBtnFocus(c.id)"
-      @blur.stop="sBtnBlur(c.id)"
-      @keydown.stop="sBtnKeyDown(c.id, $event)"
-    />-->
   </div>
 </template>
 
@@ -35,7 +22,7 @@ export default {
     };
   },
   props: {
-    difficulty: Number //lower is easier, needs to be within 0-1
+    difficulty: String //lower is easier, needs to be within 0-1
   },
   methods: {
     sBtnClick(id) {
@@ -439,6 +426,4 @@ export default {
 .preGen {
   background-color: lightsteelblue;
 }
-
-
 </style>

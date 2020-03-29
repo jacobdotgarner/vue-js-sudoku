@@ -1,30 +1,31 @@
 <template>
   <div id="controls">
-    <input type="button" value="New Game" />
+    <input type="button" value="New Game" v-on:click="$emit('restart-game', difficulty)" />
     <div id="difficultyBlock">
-      <!-- <label for="difficultyRange">Difficulty: </label><span >{{this.difficulty}}</span>
+      <label for="difficultyRange">New Game Difficulty:</label>
+      <span>{{this.difficulty}}</span>
       <input
         type="range"
-        min="1"
-        max="9"
-        v-bind:value="difficulty"
+        min="0.1"
+        max="0.9"
+        v-model.number="difficulty"
+        step="0.1"
         class="slider"
         name="difficultyRange"
         id="difficultyRange"
       />
-      <label>Easy ------ Tough</label> -->
-      
+      <label>Easier ------ Tougher</label>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-    data() {
-        return {
-            difficulty: 5,
-        }
-    }
+  data() {
+    return {
+      difficulty: 0.5
+    };
+  }
 };
 </script>
 
@@ -36,7 +37,8 @@ export default {
 }
 
 #difficultyBlock {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
 }
 </style>
