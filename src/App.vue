@@ -2,24 +2,28 @@
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <h1>Sudoku!</h1>
     <sudoku-grid difficulty=0.4></sudoku-grid>
+    <controls ></controls>
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 import SudokuGrid from './components/SudokuGrid.vue'
+import Controls from './components/Controls.vue'
 
 export default {
   name: 'App',
   components: {
     // HelloWorld
-    SudokuGrid
+    SudokuGrid,
+    Controls
   }
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

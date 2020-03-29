@@ -417,9 +417,9 @@ export default {
 
 .sBtn {
   max-width: 100%;
-  min-width: 40px;
+  min-width: 50px;
   max-height: 100%;
-  min-height: 40px;
+  min-height: 50px;
   /* background-color: blue; */
 }
 
