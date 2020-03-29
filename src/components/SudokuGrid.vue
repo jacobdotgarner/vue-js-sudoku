@@ -34,6 +34,9 @@ export default {
       isVictory: false
     };
   },
+  props: {
+    difficulty: Number //lower is easier, needs to be within 0-1
+  },
   methods: {
     sBtnClick(id) {
       console.log("click @ cell : " + id);
@@ -112,11 +115,11 @@ export default {
       let arr = this.makeCells();
       let sudokuGrid = this.generateSudokuGrid();
       let i = 0;
-      const difficulty = 0.1;
+      //const difficulty = 0.4;
       //console.log(sudokuGrid);
       arr.map(c => {
         const rand = Math.random();
-        if (rand <= difficulty) {
+        if (rand <= this.difficulty) {
           c.val = "";
         } else {
           c.val = sudokuGrid[i];
@@ -436,4 +439,6 @@ export default {
 .preGen {
   background-color: lightsteelblue;
 }
+
+
 </style>

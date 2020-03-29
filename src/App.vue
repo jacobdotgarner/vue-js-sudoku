@@ -2,7 +2,7 @@
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <sudoku-grid></sudoku-grid>
+    <sudoku-grid difficulty=0.4></sudoku-grid>
   </div>
 </template>
 
