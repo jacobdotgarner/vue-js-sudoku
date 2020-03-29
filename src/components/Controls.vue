@@ -1,8 +1,8 @@
 <template>
   <div id="controls">
-    <input type="button" value="New Game" v-on:click="$emit('restart-game', difficulty)" />
+    <input id="newGameBtn" type="button" value="New Game" v-on:click="$emit('restart-game', difficulty)" />
     <div id="difficultyBlock">
-      <label for="difficultyRange">New Game Difficulty:</label>
+      <label id="diffTitle" for="difficultyRange">New Game Difficulty:</label>
       <span>{{this.difficulty}}</span>
       <input
         type="range"
@@ -40,5 +40,23 @@ export default {
   display: flex;
   flex-direction: column;
   margin-left: 30px;
+  border: 1px solid black;
+}
+
+#diffTitle {
+  border-bottom: 1px solid black;
+}
+
+#newGameBtn {
+    background-color: steelblue;
+    color: white;
+    min-width: 150px;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#newGameBtn:hover {
+    background-color: lightsteelblue;
+    color: rgb(37, 42, 46);
 }
 </style>
