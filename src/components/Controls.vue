@@ -2,7 +2,7 @@
   <div id="controls">
     <input type="button" value="New Game" />
     <div id="difficultyBlock">
-      <label for="difficultyRange">Difficulty: </label><span >{{this.difficulty}}</span>
+      <!-- <label for="difficultyRange">Difficulty: </label><span >{{this.difficulty}}</span>
       <input
         type="range"
         min="1"
@@ -12,7 +12,7 @@
         name="difficultyRange"
         id="difficultyRange"
       />
-      <label>Easy ------ Tough</label>
+      <label>Easy ------ Tough</label> -->
       
     </div>
   </div>
