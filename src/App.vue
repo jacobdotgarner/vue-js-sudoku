@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     restartGame($event) {
-      console.log("restart game function called");
+      // console.log("restart game function called");
       this.diffVal = $event;
       this.gridKey += 1;
     },

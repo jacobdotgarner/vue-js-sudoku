@@ -26,15 +26,15 @@ export default {
   },
   methods: {
     sBtnClick(id) {
-      console.log("click @ cell : " + id);
+      // console.log("click @ cell : " + id);
     },
 
     sBtnFocus(id) {
-      console.log("got focus @ cell : " + id);
+      // console.log("got focus @ cell : " + id);
     },
 
     sBtnBlur(id) {
-      console.log("lost focus @ cell : " + id);
+      // console.log("lost focus @ cell : " + id);
     },
 
     sBtnKeyDown(id, $event) {
@@ -218,10 +218,10 @@ export default {
         }
         if (wasErrorThrown) {
           wasErrorThrown = false;
-          console.log("grid gen failure");
+          // console.log("grid gen failure");
         } else {
           wasSuccessful = true;
-          console.log("grid gen success");
+          // console.log("grid gen success");
         }
       }
       return grid;
